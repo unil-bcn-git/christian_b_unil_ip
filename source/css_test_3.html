@@ -1,0 +1,131 @@
+<html lang="sp">
+<head>
+    
+    <style>
+        * {
+            color: green;
+        }
+        #header {
+            background-color: gray;
+            color: white;
+        }
+        p {
+            font-size: 26px;
+            color: red;
+        }
+        .button {
+            background-color: blue;
+            color: white;
+        }
+        div>p {
+            margin-left: 20px;
+        }
+        h1+p {
+            font-weight: bold;
+        } 
+        h1~p {
+            font-style: italic;
+        }      
+        input[type] {
+            border: 2px solid black;
+            color: rgb(12, 12, 12);
+        }        
+        input[type="text"] {
+            background-color: yellow;
+        } 
+        a[href^="http"] {
+            color: red;
+            font-weight: bold;
+            text-decoration: none;
+        }    
+        a[href^="https"] {
+            color: green;
+            text-decoration: none;
+        }          
+        a[href*="example1"] {
+            text-decoration: underline;
+        }     
+        a[href$=".pdf"] {
+            color: orange;
+        }
+
+        p[class~="highlight"] {
+            background: yellow;
+        }
+        p[lang="sp"] {
+            color: blue;
+        }
+
+        a:hover {
+            color: red;
+        }
+        p:hover {
+            color: rgb(157, 255, 0);
+        }
+        input:focus {
+            outline: 3px solid red;
+        }      
+        .toto:first-child {
+        color: brown;
+        background-color: lightblue;
+        }
+
+        .toto {
+        color: brown;
+        background-color: bisque;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="header">This is the header section.</div>
+    <h1>This is a header.</h1>
+    <p>This is immediately following the header and is bold.</p>
+    <p>This will not be bold.</p>
+    <p>Paragraph Text</p>
+    <button class="button">Click Me!</button>
+    
+    <div>
+        <p>This paragraph inside a div will be red.</p>
+    </div>
+    
+    <div>
+        <p>This is a direct child and has a left margin.</p>
+        <div>
+            <p>This is not a direct child.</p>
+        </div>
+    </div>
+
+    <input type="text" placeholder="Text input">
+    <br>
+    <br>
+    <input type="number" placeholder="Number input">
+    <br>
+    <br>     
+    <a href="https://example.com/">Secure link</a>  
+    <br>
+    <a href="http://example.com/">Non-secure link</a>
+    <br>
+    <br>
+    <a href="https://example1.com/">This contains 'example1' and is underlined.</a>   
+    <br>
+    <a href="https://otherlink.com">This is not underlined.</a>
+    <br>
+    <br>
+    <a href="https://otherlink.com/tt.pdf"> contains a pdf reference.</a>
+    <br>
+    <br>
+    <p class="highlight">This text is highlighted</p>
+
+    <p lang="sp">Hasta la vista, baby</p>
+
+    <a href="https://example.com/">Hover over this to see the effect.</a>
+   
+
+    <div class="toto">
+        <p class="toto">Hello1</p>
+        <p>Hello2</p>
+    </div>
+    
+</body>
+</html>

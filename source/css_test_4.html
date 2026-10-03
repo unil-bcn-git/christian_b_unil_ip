@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<style>
+
+.center {
+  text-align: center;
+}
+
+p.large {
+  font-size: 200%;
+}
+
+p.fancy.beige {
+  font-family: 'Courier New', monospace;
+  background-color: beige;
+  border: 2px solid green;
+}
+
+p.ex1 .ex2 {
+  background-color: yellow;
+}
+
+p.ex1 .ex2 {
+  background-color: orange;
+}
+</style>
+</head>
+<body>
+
+<h1>Demo of the .class selector</h1>
+
+<h2 class="center">This heading will be center-aligned</h2>
+
+<p>This paragraph will not be affected.</p>
+
+<p class="center">This paragraph will be center-aligned.</p>
+
+<p class="center large">This paragraph will be center-aligned, and in a large font-size.</p> 
+
+<p class="fancy large beige">This paragraph will be in a monospace font, have a background color and a border, and also have a large font-size.</p> 
+
+<p class="ex1">This paragraph has a <span class="ex2">span inside</span>, that will be styled.</p> 
+
+</body>
+</html>
