@@ -127,10 +127,18 @@ audio {
     width: 100%;
 }
 
-.hal_message {
+.hal_message_1 {
     font-size: 2vw;
     font-family: monospace;
     color:white;
+    background-color: lightblue;
+}
+
+.hal_message_2 {
+    font-size: 2vw;
+    font-family: monospace;
+    font-weight: bold;
+    color:red;
     background-color: lightblue;
 }
 
@@ -148,3 +156,127 @@ audio {
     background-color: white;  
     width: 100%;
 }
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+.blinking-text {
+    text-align: center;
+    margin-top: 20%;
+    font-size: 24px;
+    background-color: red;
+    color: orange;
+    animation: blink 2s infinite;
+}
+
+.tw-01, .tw-01 *, .tw-01 *::before, .tw-01 *::after {
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+  background-color: ##0a0e11;
+  width: 100%;
+}
+.tw-01 ::selection {
+  background: #a78bfa;
+  color: #lightblue;
+}
+.tw-01 {
+  --bg: #0f0a1e;
+  --surface: #1a1033;
+  --accent: #a78bfa;
+  --text: #e2d9f3;
+  --muted: #6b5fa0;
+  font-family: 'Courier New', Courier, monospace;
+  min-height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+}
+.tw-01__stage {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.tw-01__label {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  opacity: 0;
+  animation: tw-01-fadein 0.4s 0.2s forwards;
+}
+.tw-01__text {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  /* border-right: 3px solid var(--accent); */
+  animation: tw-01-type 1.1s steps(13) 0.8s forwards, tw-01-blink 0.75s steps(2) 0.8s infinite;
+}
+.tw-01__sub {
+  font-size: 0.95rem;
+  color: var(--muted);
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: tw-01-sub 1.5s steps(38) 2.2s forwards;
+}
+@keyframes tw-01-type {
+  from {
+    width: 0;
+  }
+  to {
+    width: 13ch;
+  }
+}
+@keyframes tw-01-sub {
+  from {
+    width: 0;
+  }
+  to {
+    width: 38ch;
+  }
+}
+@keyframes tw-01-blink {
+  0%, 100% {
+    border-color: var(--accent);
+  }
+  50% {
+    border-color: transparent;
+  }
+}
+@keyframes tw-01-fadein {
+  to {
+    opacity: 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tw-01__text {
+    width: 50ch;
+    animation: none;
+    border-right-color: var(--accent);
+  }
+  .tw-01__sub {
+    width: 38ch;
+    animation: none;
+  }
+  .tw-01__label {
+    opacity: 1;
+    animation: none;
+  }
+}
+
+
