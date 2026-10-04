@@ -201,3 +201,12 @@ audio {
 @keyframes blink {
   50% { border-color: transparent; }
 }
+
+.id_cc {
+    background-color: lightblue;
+    font-size: 0.8vw;
+    color: black;
+    padding-top: 1vh;
+    margin: 0px;
+    
+}
